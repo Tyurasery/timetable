@@ -33,7 +33,7 @@ class LecturesController < ApplicationController
 
     respond_to do |format|
       if @lecture.save
-        format.html { redirect_to @lecture, notice: 'Lecture was successfully created.' }
+        format.html { redirect_to lectures_path, notice: 'Lecture was successfully created.' }
         format.json { render :show, status: :created, location: @lecture }
       else
         format.html { render :new }

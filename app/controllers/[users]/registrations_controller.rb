@@ -6,6 +6,13 @@ class [users]::RegistrationsController < Devise::RegistrationsController
   # def new
   #   super
   # end
+  def sign_up_params
+    params.require(:user).permit(:user_name, :email, :password, :password_confirmation)
+  end
+
+  def account_update_params
+    params.require(:user).permit(:user_name, :email, :password, :password_confirmation, :current_password)
+  end
 
   # POST /resource
   # def create
