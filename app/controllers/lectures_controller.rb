@@ -5,6 +5,9 @@ class LecturesController < ApplicationController
   # GET /lectures.json
   def index
     @lectures = Lecture.all
+    @users = User.all
+    @cearch = User.find(current_user)
+    @shou = @cearch.email
   end
 
   # GET /lectures/1

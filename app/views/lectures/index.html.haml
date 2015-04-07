@@ -27,7 +27,8 @@
           %td= link_to 'Edit', edit_lecture_path(lecture)
           %td= link_to 'Destroy', lecture, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
 
+%br
+= @cearch.email
 = link_to 'New Lesson', new_lecture_path
 = button_to('Log Out', destroy_user_session_path, class:'btn btn-danger', :method => :delete)
